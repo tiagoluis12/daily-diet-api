@@ -6,11 +6,16 @@ Daily Diet is a mobile application for controlling your diet. Here, you can reco
 
 To develop this API, used the following technologies/libraries:
 
--Node;
--TypeScript;
--Fastify;
--Knex;
--Zod;
+- Node.js
+- Typescript
+- Fastify
+- Zod
+- SQLite
+- Supertest
+- Vitest
+- knex
+- Dotenv
+- EsLint
 
 ### Application rules
 
