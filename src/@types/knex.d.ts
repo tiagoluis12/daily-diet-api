@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { knex } from 'knex'
+import { Knex } from 'knex'
 import { User } from './user'
 
 declare module 'knex/types/tables' {

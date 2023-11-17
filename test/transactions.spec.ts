@@ -2,8 +2,9 @@ import { it, expect, beforeAll, afterAll, describe, beforeEach } from 'vitest'
 import { execSync } from 'node:child_process'
 import request from 'supertest'
 import { app } from '../src/app'
+import moment from 'moment'
 
-describe('Transactions routes', () => {
+describe('Meals Routes', () => {
   beforeAll(async () => {
     await app.ready()
   })
@@ -17,7 +18,7 @@ describe('Transactions routes', () => {
     execSync('npm run knex migrate:latest')
   })
 
-  it('should be able to create a new transaction', async () => {
+  it('should be able to create a new meal', async () => {
     await request(app.server)
       .post('/transactions')
       .send({

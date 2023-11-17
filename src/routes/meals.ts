@@ -16,14 +16,14 @@ export async function mealsRoutes(app: FastifyInstance) {
       const meals = await knex('meals').where('session_id', sessionId).select()
 
       const formattedMeals = meals.map((meal) => {
-        const formattedMeals = moment(meal.date).format()
+        const formattedDate = moment(meal.date).format()
 
         return {
           id: meal.id,
           name: meal.name,
           description: meal.description,
           inDiet: !!meal.inDiet,
-          date: formattedMeals,
+          date: formattedDate,
           updatedAt: meal.updated_at,
           createdAt: meal.created_at,
         }
