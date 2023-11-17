@@ -1,7 +1,7 @@
 {
-  "name": "project-02",
+  "name": "Daily-Diet",
   "version": "1.0.0",
-  "description": "",
+  "description": "Daily Diet APP",
   "main": "index.js",
   "engines": {
     "node": "16.x"
@@ -9,9 +9,11 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js",
-    "test:users": "vitest users.spec.ts",
-    "test:meals": "vitest meals.spec.ts",
-    "build": "tsup src --out-dir build"
+    "lint": "eslint src --ext .ts --fix",
+    "build": "tsup src --out-dir build",
+    "test:users": "vitest Users.spec.ts",
+    "test:meals": "vitest Meals.spec.ts",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
